@@ -4,12 +4,12 @@
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('teachers.update', ['id' => $rec->id]) : route('teachers.create')}}">
     {{ csrf_field() }}
-    <label class="form-label mt-3">Họ và tên *</label>
+    <label class="form-label mt-3">Full Name *</label>
     <div class="input-group input-group-outline">
         <input type="text" name="name" class="form-control" required value="{{$rec->name ?? old('name') ?? ''}}">
     </div>
 
-    <label class="form-label mt-3">Tên tài khoản *</label>
+    <label class="form-label mt-3">User name *</label>
     <div class="input-group input-group-outline">
         <input type="text" name="username" class="form-control" required value="{{$rec->username ?? old('username') ?? ''}}">
     </div>
@@ -19,7 +19,7 @@
         <input type="email" name="email" class="form-control" required value="{{$rec->email ?? old('email') ?? ''}}">
     </div>
 
-    <label class="form-label mt-3">Mật khẩu {{isset($rec) ? '' : '*'}}</label>
+    <label class="form-label mt-3">Password {{isset($rec) ? '' : '*'}}</label>
     <div class="input-group input-group-outline">
         <input type="password" name="password" class="form-control input-outline" {{isset($rec) ? '' : 'required'}}>
     </div>

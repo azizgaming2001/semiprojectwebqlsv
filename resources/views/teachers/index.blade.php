@@ -7,8 +7,8 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Họ và tên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên tài khoản</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Full name</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Username</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -19,13 +19,13 @@
                         <td class="text-xs">{{$row->username}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('teachers.edit', ['id' => $row->id])}}">Sửa</a> | 
+                                href="{{route('teachers.edit', ['id' => $row->id])}}">change</a> |
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('teachers.delete', ['id' => $row->id])}}">Xóa</a>
+                                href="{{route('teachers.delete', ['id' => $row->id])}}">delete</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">no data discovery</td></tr>
                     @endforelse
                 </tbody>
             </table>
