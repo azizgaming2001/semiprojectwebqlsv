@@ -7,7 +7,7 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên lớp</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Class name</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -17,11 +17,11 @@
                         <td class="text-xs">{{$row->name}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.classroom', ['id' => $row->id])}}">Xem điểm</a>
+                                href="{{route('scores.classroom', ['id' => $row->id])}}">view Scores</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">no data discovery</td></tr>
                     @endforelse
                 </tbody>
             </table>
