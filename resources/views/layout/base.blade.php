@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="icon" type="image/png" href="{{asset('/public/assets/img/logo.jpg')}}">
     <title>
-        Quản lý điểm
+        FAP Btec student
     </title>
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
@@ -28,7 +28,7 @@
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="{{route('index')}}">
                 <img src="{{asset('/public/assets/img/btec.png')}}" class="navbar-brand-img h-100" alt="main_logo">
-                <span class="ms-1 font-weight-bold text-white">Quản lý sinh viên</span>
+                <span class="ms-1 font-weight-bold text-white">Student manage</span>
             </a>
         </div>
         <ul class="navbar-nav mb-3">
@@ -36,7 +36,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white bg-gradient-primary" href="{{route('login')}}">
                     <span class="nav-link-text ms-1">
-                        Đăng nhập
+                        Login
                     </span>
                 </a>
             </li>
@@ -44,7 +44,7 @@
             <li class="nav-item">
                 <a class="nav-link text-white bg-gradient-primary" href="{{route('logout')}}">
                     <span class="nav-link-text ms-1">
-                        Đăng xuất
+                        Logout
                     </span>
                 </a>
             </li>
@@ -61,42 +61,42 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('students')}}">
                         <span class="nav-link-text ms-1">
-                            Danh sách sinh viên
+                            List Student
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('students.add')}}">
                         <span class="nav-link-text ms-1">
-                            Thêm sinh viên
+                            Insert Student
                         </span>
                     </a>
                 </li>
                 <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Giáo viên</h6>
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Teacher</h6>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('teachers')}}">
                         <span class="nav-link-text ms-1">
-                            Danh sách giáo viên
+                            List teacher
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('teachers.add')}}">
                         <span class="nav-link-text ms-1">
-                            Thêm giáo viên
+                            Insert teacher
                         </span>
                     </a>
                 </li>
                 @endif
                 <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Môn học</h6>
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">subject</h6>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('subjects')}}">
                         <span class="nav-link-text ms-1">
-                            Danh sách môn học
+                            List subject
                         </span>
                     </a>
                 </li>
@@ -104,47 +104,47 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('subjects.add')}}">
                         <span class="nav-link-text ms-1">
-                            Thêm môn học
+                            Insert subject
                         </span>
                     </a>
                 </li>
                 @endif
                 <li class="nav-item mt-3">
-                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Bảng điểm</h6>
+                    <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">transcript</h6>
                 </li>
                 @if(in_array(auth()->user()->role, ['teacher']))
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.request_edit')}}">
                         <span class="nav-link-text ms-1">
-                            Danh sách yêu cầu sửa điểm
+                            List report about transcript
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.add')}}">
                         <span class="nav-link-text ms-1">
-                            Thêm điểm
+                            add scores
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.subjects')}}">
                         <span class="nav-link-text ms-1">
-                            Bảng điểm theo môn
+                            scores table for each subject
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.classrooms')}}">
                         <span class="nav-link-text ms-1">
-                            Bảng điểm theo lớp
+                            scores table for each class
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.students')}}">
                         <span class="nav-link-text ms-1">
-                            Bảng điểm theo sinh viên
+                            scores table for each student
                         </span>
                     </a>
                 </li>
@@ -153,7 +153,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.student', ['id' => auth()->user()->profile->id])}}">
                         <span class="nav-link-text ms-1">
-                            Bảng điểm cá nhân
+                            transcript
                         </span>
                     </a>
                 </li>
@@ -161,7 +161,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('scores.semesters')}}">
                         <span class="nav-link-text ms-1">
-                            Bảng điểm theo kỳ
+                            scores table for each course
                         </span>
                     </a>
                 </li>
@@ -172,7 +172,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('classes.view', ['id' => auth()->user()->profile->class->id])}}">
                         <span class="nav-link-text ms-1">
-                            Danh sách lớp
+                            View List class
                         </span>
                     </a>
                 </li>
@@ -181,14 +181,14 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('classes')}}">
                         <span class="nav-link-text ms-1">
-                            Danh sách lớp
+                            List class
                         </span>
                     </a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('classes.add')}}">
                         <span class="nav-link-text ms-1">
-                            Thêm lớp
+                            âdd class
                         </span>
                     </a>
                 </li>
