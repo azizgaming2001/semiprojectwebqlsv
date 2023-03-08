@@ -7,8 +7,8 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên lớp</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Số sinh viên</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name class</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Number of student</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -19,15 +19,15 @@
                         <td class="text-xs">{{$row->students->count()}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('classes.view', ['id' => $row->id])}}">Danh sách</a> | 
+                                href="{{route('classes.view', ['id' => $row->id])}}">List</a> |
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('classes.edit', ['id' => $row->id])}}">Sửa</a> | 
+                                href="{{route('classes.edit', ['id' => $row->id])}}">Change</a> |
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('classes.delete', ['id' => $row->id])}}">Xóa</a>
+                                href="{{route('classes.delete', ['id' => $row->id])}}">Delete</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td colspan='3' class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td colspan='3' class="align-middle text-secondary font-weight-bold text-xs">no data discovery</td></tr>
                     @endforelse
                 </tbody>
             </table>

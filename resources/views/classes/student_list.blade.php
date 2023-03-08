@@ -7,9 +7,9 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Họ và tên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mã số sinh viên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ngày sinh</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name student</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Student ID</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">DOB</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -22,14 +22,14 @@
                         <td class="align-middle">
                             @if(in_array(auth()->user()->role, ['teacher']))
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('students.edit', ['id' => $row->user->id])}}">Sửa</a> | 
+                                href="{{route('students.edit', ['id' => $row->user->id])}}">Change</a> |
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('students.delete', ['id' => $row->user->id])}}">Xóa</a>
+                                href="{{route('students.delete', ['id' => $row->user->id])}}">Delete</a>
                             @endif
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs"> no data discovery</td></tr>
                     @endforelse
                 </tbody>
             </table>
