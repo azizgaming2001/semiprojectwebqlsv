@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', isset($rec) ? 'Cập nhật giáo viên: '.$rec->name : 'Thêm giáo viên')
+@section('page_title', isset($rec) ? 'Cập nhật giáo viên: '.$rec->name : 'Add Teacher')
 @section('slot')
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('teachers.update', ['id' => $rec->id]) : route('teachers.create')}}">
@@ -23,6 +23,6 @@
     <div class="input-group input-group-outline">
         <input type="password" name="password" class="form-control input-outline" {{isset($rec) ? '' : 'required'}}>
     </div>
-    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Thêm'}}">
+    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Submit'}}">
 </form>
 @stop

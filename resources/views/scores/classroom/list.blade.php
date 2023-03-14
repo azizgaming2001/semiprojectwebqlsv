@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Chọn lớp để xem điểm')
+@section('page_title', 'Choose class to view point')
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">

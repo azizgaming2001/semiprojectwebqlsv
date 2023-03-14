@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Danh sách điểm của môn: '.$rec->name)
+@section('page_title', 'List of grades for the subject: '.$rec->name)
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">
@@ -7,13 +7,13 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Họ và tên sinh viên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mã số sinh viên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Điểm thành phần 1</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Điểm thành phần 2</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Điểm quá trình</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Điểm cuối kì</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Điểm tổng kết</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Full Name Student</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Student ID</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">component point 1</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">component point 2</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">point process</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">end point</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">summary point</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -29,13 +29,13 @@
                         <td class="text-xs">{{$row->tk}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.edit', ['id' => $row->id])}}">Sửa</a> | 
+                                href="{{route('scores.edit', ['id' => $row->id])}}">Change</a> | 
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.delete', ['id' => $row->id])}}">Xóa</a>
+                                href="{{route('scores.delete', ['id' => $row->id])}}">Delete</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">No data</td></tr>
                     @endforelse
                 </tbody>
             </table>

@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Điểm của lớp: '.$rec->name)
+@section('page_title', 'Grade point: '.$rec->name)
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">

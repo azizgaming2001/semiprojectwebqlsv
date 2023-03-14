@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Danh sách sinh viên')
+@section('page_title', 'List Student')
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">
@@ -7,11 +7,11 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Họ và tên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên tài khoản</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Ngày sinh</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mã số sinh viên</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Lớp</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Full Name</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Account Name</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Date Of Birth</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Student ID</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Class</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -25,13 +25,13 @@
                         <td class="text-xs">{{$row->profile->class->name}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('students.edit', ['id' => $row->id])}}">Sửa</a> | 
+                                href="{{route('students.edit', ['id' => $row->id])}}">Change</a> | 
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('students.delete', ['id' => $row->id])}}">Xóa</a>
+                                href="{{route('students.delete', ['id' => $row->id])}}">Delete</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">no data discovery</td></tr>
                     @endforelse
                 </tbody>
             </table>

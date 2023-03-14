@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Môn học')
+@section('page_title', 'Subjects')
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">
@@ -7,9 +7,9 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên môn</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mã môn</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Kì học</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name Subject</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Subject ID</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Semester</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -22,9 +22,9 @@
                         <td class="align-middle">
                             @if(in_array(auth()->user()->role, ['teacher']))
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('subjects.edit', ['id' => $row->id])}}">Sửa</a> | 
+                                href="{{route('subjects.edit', ['id' => $row->id])}}">Change</a> | 
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('subjects.delete', ['id' => $row->id])}}">Xóa</a>
+                                href="{{route('subjects.delete', ['id' => $row->id])}}">Delete</a>
                             @endif
                         </td>
                     </tr>

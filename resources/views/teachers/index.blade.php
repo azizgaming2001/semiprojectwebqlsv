@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Danh sách giáo viên')
+@section('page_title', 'List Teacher')
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">
@@ -19,9 +19,9 @@
                         <td class="text-xs">{{$row->username}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('teachers.edit', ['id' => $row->id])}}">change</a> |
+                                href="{{route('teachers.edit', ['id' => $row->id])}}">Change</a> |
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('teachers.delete', ['id' => $row->id])}}">delete</a>
+                                href="{{route('teachers.delete', ['id' => $row->id])}}">Delete</a>
                         </td>
                     </tr>
                     @empty

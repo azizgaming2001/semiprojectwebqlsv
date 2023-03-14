@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Đăng nhập')
+@section('page_title', 'Login')
 @section('slot')
 <div class="col-lg-4 col-md-8 col-12 mx-auto mt-5">
     <div class="card z-index-0 fadeIn3 fadeInBottom">
@@ -19,7 +19,7 @@
                     <input type="password" name="password" class="form-control" required>
                 </div>
                 <div class="text-center">
-                    <input type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2" value="Đăng nhập">
+                    <input type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2" value="Login">
                 </div>
                 {{ csrf_field() }}
             </form>

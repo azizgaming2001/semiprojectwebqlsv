@@ -1,25 +1,25 @@
 @extends('layout.base')
-@section('page_title', isset($rec) ? 'Cập nhật môn học: '.$rec->name : 'Thêm môn học')
+@section('page_title', isset($rec) ? 'Cập nhật môn học: '.$rec->name : 'Add Subject')
 @section('slot')
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('subjects.update', ['id' => $rec->id]) : route('subjects.create')}}">
     {{ csrf_field() }}
-    <label class="form-label mt-3">Tên môn *</label>
+    <label class="form-label mt-3">Name Subject *</label>
     <div class="input-group input-group-outline">
         <input type="text" name="name" class="form-control" required value="{{$rec->name ?? old('name') ?? ''}}">
     </div>
 
-    <label class="form-label mt-3">Mã môn *</label>
+    <label class="form-label mt-3">Subject ID *</label>
     <div class="input-group input-group-outline">
         <input type="text" name="code" class="form-control" required value="{{$rec->code ?? old('code') ?? ''}}">
     </div>
 
-    <label class="form-label mt-3">Kì học *</label>
+    <label class="form-label mt-3">Semester *</label>
     <div class="input-group input-group-outline">
         <input type="number" name="semester" class="form-control" required value="{{$rec->semester ?? old('semester') ?? ''}}">
     </div>
 
-    <label class="form-label mt-3">Giáo viên</label>
+    <label class="form-label mt-3">Teacher</label>
     <div class="overflow-auto" style="max-height: 50vh;">
         @foreach($teachers as $row)
         @php
@@ -41,6 +41,6 @@
         @endforeach
     </div>
 
-    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Thêm'}}">
+    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Submit'}}">
 </form>
 @stop

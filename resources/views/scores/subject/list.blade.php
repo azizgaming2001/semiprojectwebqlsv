@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', 'Chọn môn để xem điểm')
+@section('page_title', 'Select subject to view point')
 @section('slot')
 <div class="card">
     <div class="card-body px-0 pb-2">
@@ -7,8 +7,8 @@
             <table class="table align-items-center mb-0">
                 <thead>
                     <tr>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tên môn</th>
-                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Mã môn</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name Subject</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Subject ID</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -19,11 +19,11 @@
                         <td class="text-xs">{{$row->code}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.subject', ['id' => $row->id])}}">Xem điểm</a>
+                                href="{{route('scores.subject', ['id' => $row->id])}}">View poinr</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">No Data</td></tr>
                     @endforelse
                 </tbody>
             </table>
