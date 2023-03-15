@@ -14484,7 +14484,7 @@ hr.horizontal {
         margin-bottom: 3px; }
   .g-sidenav-show.g-sidenav-pinned .navbar .sidenav-toggler-inner .sidenav-toggler-line:first-child,
   .g-sidenav-show.g-sidenav-pinned .navbar .sidenav-toggler-inner .sidenav-toggler-line:last-child {
-    width: 13px;
+    width: 20px;
     transform: translateX(5px); }
 
 .navbar-light {

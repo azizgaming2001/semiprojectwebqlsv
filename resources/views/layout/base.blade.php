@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="{{asset('/public/assets/img/logo.jpg')}}">
+    <link rel="icon" type="image/png" href="{{asset('/public/assets/img/logo1.png')}}">
     <title>
         FAP Btec student
     </title>
