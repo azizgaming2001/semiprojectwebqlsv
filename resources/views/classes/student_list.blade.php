@@ -23,8 +23,8 @@
                             @if(in_array(auth()->user()->role, ['teacher']))
                             <a class="text-secondary font-weight-bold text-xs"
                                 href="{{route('students.edit', ['id' => $row->user->id])}}">Change</a> |
-                            <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('students.delete', ['id' => $row->user->id])}}">Delete</a>
+                            <a class="text-secondary font-weight-bold text-xs" href="{{route('students.delete', ['id' => $row->user->id])}}">Delete</a>
+
                             @endif
                         </td>
                     </tr>

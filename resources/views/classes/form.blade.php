@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', isset($rec) ? 'Cập nhật lớp: '.$rec->name : 'Add Class')
+@section('page_title', isset($rec) ? 'update class ìnormation: '.$rec->name : 'Add Class')
 @section('slot')
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('classes.update', ['id' => $rec->id]) : route('classes.create')}}">
@@ -9,6 +9,6 @@
         <input type="text" name="name" class="form-control" required value="{{$rec->name ?? old('name') ?? ''}}">
     </div>
 
-    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Submit'}}">
+    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'update' : 'Submit'}}">
 </form>
-@stop 
+@stop
