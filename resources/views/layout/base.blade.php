@@ -4,21 +4,21 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="{{asset('/public/assets/img/logo1.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('/assets/img/logo1.png')}}">
     <title>
         FAP Btec student
     </title>
     <!-- Fonts and icons -->
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
     <!-- Nucleo Icons -->
-    <link href="{{asset('/public/assets/css/nucleo-icons.css')}}" rel="stylesheet" />
-    <link href="{{asset('/public/assets/css/nucleo-svg.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/nucleo-icons.css')}}" rel="stylesheet" />
+    <link href="{{asset('assets/css/nucleo-svg.css')}}" rel="stylesheet" />
     <!-- Font Awesome Icons -->
     <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
     <!-- CSS Files -->
-    <link id="pagestyle" href="{{asset('/public/assets/css/material-dashboard.css?v=3.0.0')}}" rel="stylesheet" />
+    <link id="pagestyle" href="{{asset('/assets/css/material-dashboard.css?v=3.0.0')}}" rel="stylesheet" />
 </head>
 
 <body class="g-sidenav-show">
@@ -27,7 +27,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="{{route('index')}}">
-                <img src="{{asset('/public/assets/img/btec.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+                <img src="{{asset('/assets/img/btec.png')}}" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold text-white">Student manage</span>
             </a>
         </div>
@@ -222,9 +222,9 @@
         </div>
     </main>
     <!--   Core JS Files   -->
-    <script src="{{asset('/public/assets/js/core/popper.min.js')}}"></script>
-    <script src="{{asset('/public/assets/js/core/bootstrap.min.js')}}"></script>
-    <script src="{{asset('/public/assets/js/material-dashboard.min.js?v=3.0.0')}}"></script>
+    <script src="{{asset('/assets/js/core/popper.min.js')}}"></script>
+    <script src="{{asset('/assets/js/core/bootstrap.min.js')}}"></script>
+    <script src="{{asset('/assets/js/material-dashboard.min.js?v=3.0.0')}}"></script>
 </body>
 
 </html>

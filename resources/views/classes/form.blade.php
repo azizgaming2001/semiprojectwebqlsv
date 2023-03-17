@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', isset($rec) ? 'update class ìnormation: '.$rec->name : 'Add Class')
+@section('page_title', isset($rec) ? 'update class information: '.$rec->name : 'Add Class')
 @section('slot')
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('classes.update', ['id' => $rec->id]) : route('classes.create')}}">
