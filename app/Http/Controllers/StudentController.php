@@ -35,7 +35,7 @@ class StudentController extends Controller
                 $params['profile_id'] = StudentProfile::create($params)->id;
                 MainModel::create($params);
             });
-            return redirect()->route('students')->withSuccess("Đã thêm");
+            return redirect()->route('students')->withSuccess("add successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -63,7 +63,7 @@ class StudentController extends Controller
                 $rec->profile->update($params);
                 $rec->update($params);
             });
-            return redirect()->route('students')->withSuccess("Đã cập nhật");
+            return redirect()->route('students')->withSuccess("up to date");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -74,7 +74,7 @@ class StudentController extends Controller
             $rec = MainModel::findOrFail($id);
             $rec->profile->delete();
             $rec->delete();
-            return redirect()->back()->withSuccess("Đã xóa");
+            return redirect()->back()->withSuccess("delete complte");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         }

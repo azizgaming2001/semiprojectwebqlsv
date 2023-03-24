@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', isset($rec) ? 'Cập nhật sinh viên: '.$rec->name : 'Add student')
+@section('page_title', isset($rec) ? 'update student information: '.$rec->name : 'Add student')
 @section('slot')
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('students.update', ['id' => $rec->id]) : route('students.create')}}">
@@ -30,13 +30,15 @@
     </div>
 
     <label class="form-label mt-3">Class *</label>
-    <select name="class_id" class="form-select px-3 rounded-lg" required value="{{$rec->class_id ?? old('class_id') ?? ''}}">
+    <select name="class_id[]" class="form-group px-3 rounded-lg" required value="{{$rec->class_id ?? old('class_id') ?? ''}}">
         @foreach($classes as $class)
-        <option value="{{$class->id}}" {{ isset($rec) && $rec->profile->class_id == $class->id ? 'selected' : '' }}>
+        <option value="{{$class->id}}" {{ isset($rec) && $rec->profile->class_id == $class->id ? 'multiple' : '' }} multiple>
             {{$class->name}}
+
         </option>
         @endforeach
     </select>
-    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Submit'}}">
+
+    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'update' : 'Submit'}}">
 </form>
 @stop

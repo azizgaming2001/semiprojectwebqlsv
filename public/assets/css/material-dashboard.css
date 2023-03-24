@@ -14646,7 +14646,7 @@ hr.horizontal {
   .navbar-vertical.navbar-expand-xs .lavalamp-object {
     width: calc(100% - 1rem) !important;
     background: theme-color("primary");
-    color: color-yiq(#e91e63);
+    color: color-yiq(#000000);
     margin-right: 0.5rem;
     margin-left: 0.5rem;
     padding-left: 1rem;
@@ -15515,7 +15515,8 @@ hr.horizontal {
 
 .rtl .sidenav .navbar-nav {
   width: 100%;
-  padding-right: 0; }
+  padding-right: 0;
+ }
 
 .rtl .fixed-plugin .fixed-plugin-button {
   left: 30px;
