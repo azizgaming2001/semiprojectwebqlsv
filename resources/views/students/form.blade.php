@@ -30,15 +30,14 @@
     </div>
 
     <label class="form-label mt-3">Class *</label>
-    <select name="class_id[]" class="form-group px-3 rounded-lg" required value="{{$rec->class_id ?? old('class_id') ?? ''}}">
+    <select name="class_id" class="form-select px-3 rounded-lg" required value="{{$rec->class_id ?? old('class_id') ?? ''}}">
         @foreach($classes as $class)
-        <option value="{{$class->id}}" {{ isset($rec) && $rec->profile->class_id == $class->id ? 'multiple' : '' }} multiple>
+        <option value="{{$class->id}}"   {{ isset($rec) && $rec->profile->class_id == $class->id ? 'selected' : '' }}>
             {{$class->name}}
 
         </option>
         @endforeach
     </select>
-
-    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'update' : 'Submit'}}">
+    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Submit'}}">
 </form>
 @stop
