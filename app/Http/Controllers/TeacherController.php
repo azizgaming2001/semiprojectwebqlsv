@@ -32,7 +32,7 @@ class TeacherController extends Controller
                 $params['profile_id'] = TeacherProfile::create([])->id;
                 MainModel::create($params);
             });
-            return redirect()->route('teachers')->withSuccess("Đã thêm");
+            return redirect()->route('teachers')->withSuccess("add successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -58,7 +58,7 @@ class TeacherController extends Controller
                 // $rec->profile->update($params);
                 $rec->update($params);
             });
-            return redirect()->route('teachers')->withSuccess("Đã cập nhật");
+            return redirect()->route('teachers')->withSuccess("updated");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }

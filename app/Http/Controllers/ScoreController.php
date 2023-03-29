@@ -71,7 +71,7 @@ class ScoreController extends Controller
                     || (auth()->user()->role == 'student' && auth()->user()->profile->id == $row->student->id)
                 )
                     array_push($data['rows_filtered'], $row);
-                    
+
             }
         }
         $data['rows'] = $data['rows_filtered'];
@@ -112,7 +112,7 @@ class ScoreController extends Controller
             DB::transaction(function () use ($params) {
                 MainModel::create($params);
             });
-            return redirect()->route('scores.students')->withSuccess("Đã thêm");
+            return redirect()->route('scores.students')->withSuccess("add successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -134,7 +134,7 @@ class ScoreController extends Controller
             DB::transaction(function () use ($params, $rec) {
                 $rec->update($params);
             });
-            return redirect()->route('scores.students')->withSuccess("Đã cập nhật");
+            return redirect()->route('scores.students')->withSuccess("updated");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -145,7 +145,7 @@ class ScoreController extends Controller
         try {
             $rec = MainModel::findOrFail($id);
             $rec->delete();
-            return redirect()->back()->withSuccess("Đã xóa");
+            return redirect()->back()->withSuccess("delete successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         }
@@ -169,7 +169,7 @@ class ScoreController extends Controller
             DB::transaction(function () use ($params) {
                 RequestEditScore::create($params);
             });
-            return redirect()->back()->withSuccess("Đã thêm");
+            return redirect()->back()->withSuccess("add successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -180,7 +180,7 @@ class ScoreController extends Controller
         try {
             $rec = RequestEditScore::findOrFail($id);
             $rec->delete();
-            return redirect()->back()->withSuccess("Đã xóa");
+            return redirect()->back()->withSuccess("delete successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         }

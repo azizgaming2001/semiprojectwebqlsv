@@ -34,7 +34,7 @@ class SubjectController extends Controller
                     foreach($params['teacher_id'] as $row)
                         TeacherSubject::create(['subject_id' => $rec->id, 'teacher_id' => $row]);
             });
-            return redirect()->route('subjects')->withSuccess("Đã thêm");
+            return redirect()->route('subjects')->withSuccess("add successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -62,7 +62,7 @@ class SubjectController extends Controller
                     foreach($params['teacher_id'] as $row)
                         TeacherSubject::create(['subject_id' => $rec->id, 'teacher_id' => $row]);
             });
-            return redirect()->route('subjects')->withSuccess("Đã cập nhật");
+            return redirect()->route('subjects')->withSuccess("updated");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }

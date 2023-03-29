@@ -32,7 +32,7 @@ class ClassroomController extends Controller
             DB::transaction(function () use ($params) {
                 MainModel::create($params);
             });
-            return redirect()->route('classes')->withSuccess("Đã thêm");
+            return redirect()->route('classes')->withSuccess("add successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -52,7 +52,7 @@ class ClassroomController extends Controller
             DB::transaction(function () use ($params, $rec) {
                 $rec->update($params);
             });
-            return redirect()->route('classes')->withSuccess("Đã cập nhật");
+            return redirect()->route('classes')->withSuccess("update successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage())->withInput();
         }
@@ -63,9 +63,9 @@ class ClassroomController extends Controller
         try {
             $rec = MainModel::findOrFail($id);
             if($rec->students->count() > 0)
-                throw new \Exception('Bạn phải chuyển hết sinh viên ra khỏi lớp trước khi xóa lớp');
+                throw new \Exception('you must remove all student after delete class');
             $rec->delete();
-            return redirect()->back()->withSuccess("Đã xóa");
+            return redirect()->back()->withSuccess("delete successful");
         } catch (\Exception $e) {
             return redirect()->back()->withError($e->getMessage());
         }
