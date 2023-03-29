@@ -1,5 +1,5 @@
 @extends('layout.base')
-@section('page_title', isset($rec) ? 'Cập nhật môn học: '.$rec->name : 'Add Subject')
+@section('page_title', isset($rec) ? 'update subject: '.$rec->name : 'Add Subject')
 @section('slot')
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('subjects.update', ['id' => $rec->id]) : route('subjects.create')}}">
@@ -41,6 +41,6 @@
         @endforeach
     </div>
 
-    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'Cập nhật' : 'Submit'}}">
+    <input type="submit" class="btn bg-gradient-primary my-4 mb-2" value="{{ isset($rec) ? 'update' : 'Submit'}}">
 </form>
 @stop

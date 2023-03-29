@@ -22,14 +22,14 @@
                         <td class="align-middle">
                             @if(in_array(auth()->user()->role, ['teacher']))
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('subjects.edit', ['id' => $row->id])}}">Change</a> | 
+                                href="{{route('subjects.edit', ['id' => $row->id])}}">Change</a> |
                             <a class="text-secondary font-weight-bold text-xs"
                                 href="{{route('subjects.delete', ['id' => $row->id])}}">Delete</a>
                             @endif
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">Không có dữ liệu</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">no data discover</td></tr>
                     @endforelse
                 </tbody>
             </table>
