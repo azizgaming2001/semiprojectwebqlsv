@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="icon" type="image/png" href="{{asset('/assets/img/logo1.png')}}">
+    <link rel="icon" type="image/png" href="{{asset('https://fpt.edu.vn/Content/images/assets/Logo-Btec.png')}}">
     <title>
         FAP Btec student
     </title>
@@ -27,7 +27,7 @@
         <div class="sidenav-header">
             <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
             <a class="navbar-brand m-0" href="{{route('index')}}">
-                <img src="{{asset('/assets/img/btec.png')}}" class="navbar-brand-img h-100" alt="main_logo">
+                <img src="{{asset('https://fpt.edu.vn/Content/images/assets/Logo-Btec.png')}}" class="navbar-brand-img h-100" alt="main_logo">
                 <span class="ms-1 font-weight-bold text-white">Student manage</span>
             </a>
         </div>
