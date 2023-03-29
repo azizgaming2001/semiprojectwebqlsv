@@ -1735,6 +1735,11 @@ progress {
   color: #000;
   border-color: #d8dadd; }
 
+  .logo_login{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
 .table-dark {
   --bs-table-bg: #344767;
   --bs-table-striped-bg: #3e506f;
