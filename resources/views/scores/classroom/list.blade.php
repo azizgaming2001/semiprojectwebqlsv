@@ -17,7 +17,7 @@
                         <td class="text-xs">{{$row->name}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.classroom', ['id' => $row->id])}}">view Scores</a>
+                                href="{{route('scores.classroom', ['id' => $row->id])}}">view Score</a>
                         </td>
                     </tr>
                     @empty
