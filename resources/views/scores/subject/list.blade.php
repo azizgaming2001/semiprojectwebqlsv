@@ -19,7 +19,7 @@
                         <td class="text-xs">{{$row->code}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.subject', ['id' => $row->id])}}">View poinr</a>
+                                href="{{route('scores.subject', ['id' => $row->id])}}">View points</a>
                         </td>
                     </tr>
                     @empty
