@@ -17,11 +17,11 @@
                         <td class="text-xs">{{$row->name}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.classroom', ['id' => $row->id])}}">view Score</a>
+                                href="{{route('scores.classroom', ['id' => $row->id])}}">view Scores</a>
                         </td>
                     </tr>
                     @empty
-                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">no data discovery</td></tr>
+                    <tr><td class="align-middle text-secondary font-weight-bold text-xs">no data discover</td></tr>
                     @endforelse
                 </tbody>
             </table>
