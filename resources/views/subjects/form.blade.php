@@ -4,7 +4,7 @@
 <form id="form" class="text-start" method="POST"
     action="{{isset($rec) ? route('subjects.update', ['id' => $rec->id]) : route('subjects.create')}}">
     {{ csrf_field() }}
-    <label class="form-label mt-3">Name Subject *</label>
+    <label class="form-label mt-3">Name Subject</label>
     <div class="input-group input-group-outline">
         <input type="text" name="name" class="form-control" required value="{{$rec->name ?? old('name') ?? ''}}">
     </div>
