@@ -17,7 +17,7 @@
                         <td class="text-xs">{{$row['semester']}}</td>
                         <td class="align-middle">
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.semester', ['id' => $row['semester']])}}">View Point</a>
+                                href="{{route('scores.semester', ['id' => $row['semester']])}}">View scores</a>
                         </td>
                     </tr>
                     @empty
