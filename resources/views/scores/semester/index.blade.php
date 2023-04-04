@@ -36,11 +36,11 @@
                         <td class="align-middle">
                             @if(in_array(auth()->user()->role, ['student']))
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.request_edit.add', ['id' => $row->id])}}">Request Change Point</a>
+                                href="{{route('scores.request_edit.add', ['id' => $row->id])}}">Request edit scores</a>
                             @endif
                             @if(in_array(auth()->user()->role, ['teacher']))
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.edit', ['id' => $row->id])}}">Change</a> | 
+                                href="{{route('scores.edit', ['id' => $row->id])}}">Change</a> |
                             <a class="text-secondary font-weight-bold text-xs"
                                 href="{{route('scores.delete', ['id' => $row->id])}}">Delete</a>
                             @endif
