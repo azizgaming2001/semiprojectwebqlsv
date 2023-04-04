@@ -52,7 +52,7 @@
                 </div>
             </div>
             <div class="col-md-6">
-                <label class="form-label mt-3">Choise Subject *</label>
+                <label class="form-label mt-3">Choose Subject *</label>
                 <div class="overflow-auto" style="max-height: 50vh;">
                     @foreach($subjects as $row)
                     <div class="form-check">
