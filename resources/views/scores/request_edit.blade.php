@@ -12,7 +12,7 @@
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Name Subject</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Subject ID</th>
                         <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2"
-                            style="max-width: 25%">Messenger</th>
+                            style="max-width: 25%">Messengers</th>
                         <th class="text-secondary opacity-7"></th>
                     </tr>
                 </thead>
@@ -27,7 +27,7 @@
                         <td class="align-middle">
                             @if(in_array(auth()->user()->role, ['teacher']))
                             <a class="text-secondary font-weight-bold text-xs"
-                                href="{{route('scores.edit', ['id' => $row->score->id])}}">Change Point</a> | 
+                                href="{{route('scores.edit', ['id' => $row->score->id])}}">Change Point</a> |
                             <a class="text-secondary font-weight-bold text-xs"
                                 href="{{route('scores.request_edit.delete', ['id' => $row->id])}}">Delete Request</a>
                             @endif
