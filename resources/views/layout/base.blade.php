@@ -188,7 +188,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-white" href="{{route('classes')}}">
                         <span class="nav-link-text ms-1">
-                            List class
+                            List classes
                         </span>
                     </a>
                 </li>
